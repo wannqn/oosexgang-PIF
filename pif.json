@@ -1,0 +1,21 @@
+{
+  "ID": "DP11.260918.006",
+  "BRAND": "google",
+  "DEVICE": "frankel",
+  "MANUFACTURER": "Google",
+  "FINGERPRINT": "google/frankel_beta/frankel:17/DP11.260918.006/16451184:user/release-keys",
+  "MODEL": "Pixel 10",
+  "PRODUCT": "frankel_beta",
+  "SECURITY_PATCH": "2026-09-05",
+  "DEVICE_INITIAL_SDK_INT": "36",
+  "TYPE": "user",
+  "TAG": "release-keys",
+  "RELEASE": "17",
+  "DEBUG": false,
+  "spoofBuild": "1",
+  "spoofProps": "0",
+  "spoofProvider": "0",
+  "spoofSignature": "0",
+  "spoofVendingSdk": "0",
+  "verboseLogs": "0"
+}

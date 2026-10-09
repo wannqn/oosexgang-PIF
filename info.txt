@@ -1,0 +1,7 @@
+{
+  "format": 1,
+  "version": "frankel-DP11.260918.006",
+  "model": "Pixel 10",
+  "pif_sha256": "08eaec7fdce80d0ce9992adcf5ccaf6cdf5f2e452dc9b72c33b56623a620bc92",
+  "keybox_sha256": "8e39f9c9258d503f75ce6ca2cd7149c765c99537426c63071b485f10a3a15e8c"
+}
