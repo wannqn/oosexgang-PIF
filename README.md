@@ -1,41 +1,23 @@
-# oosexgang PIF
+# oosexgang PIF Data
 
-Configuration updates for **oosexgang PIF Updater**.
+The `pif-data` branch contains the device profile, keybox, and release manifest used for configuration updates.
 
 ## Files
 
 | File | Description |
 | --- | --- |
 | [`pif.json`](pif.json) | Device profile, including model, fingerprint, security patch date, and initial SDK level. |
-| [`keybox.xml`](keybox.xml) | Keys and certificate chains consumed by the compatible framework implementation. |
-| [`info.txt`](info.txt) | JSON manifest containing the release version and SHA-256 hashes of both configuration files. |
-
-## Updates
-
-The current KernelSU test module checks for updates after boot and every **6 hours**. Failed checks are retried after **5 minutes**.
-
-The updater validates both files and their hashes before activating the complete configuration pair. Previous versions remain available locally. GMS unstable and Play Store restart when the configuration changes.
-
-Active configuration:
-
-```text
-/data/local/oosexgang/current/pif.json
-/data/local/oosexgang/current/keybox.xml
-```
-
-Run a manual update check as root:
-
-```sh
-pif-updater
-```
-
-A compatible framework implementation is required. This repository distributes configuration data only.
+| [`keybox.xml`](keybox.xml) | Keys and certificate chains. |
+| [`info.txt`](info.txt) | JSON release manifest containing `format`, `version`, `model`, `pif_sha256`, and `keybox_sha256`. |
 
 ## Publishing an update
 
 1. Update `pif.json`, `keybox.xml`, or both.
-2. Recalculate both SHA-256 hashes and update `pif_sha256` and `keybox_sha256` in `info.txt`.
-3. Set a new `version`, keep `format: 1`, and publish the changed files together in a single commit to `pif-data`.
+2. Recalculate the SHA-256 hashes of both files and update `pif_sha256` and `keybox_sha256` in `info.txt`.
+3. Set the release `version` and profile `model`, keeping `format: 1`.
+4. Publish the changed data files and manifest together in a single commit to `pif-data`.
+
+The manifest hashes must match the exact contents of the published files.
 
 ## Download URLs
 
